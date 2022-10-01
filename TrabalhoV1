@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>CRUD JS</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="TrabalhoV1.css" />	
+	
+	<script src="TrabalhoV1.js"></script>
+</head>
+
+<body>
+	<div class="all">
+		<h1 class="title">Cadastrar Item</h1>
+		<div class="center-fixed">	
+			<form id="frmCadastro">
+				<label for="txtModelo">Modelo</label><br>
+				<input type="text" id="txtModelo" placeholder="Modelo"><br>
+
+                <label for="txtMarca">Marca</label><br>
+				<input type="text" id="txtMarca" placeholder="Marca"><br>
+
+                <label for="Tipo-select">Tipo:</label>
+
+                <select name="Tipo" id="Tipo-select">
+                 <option value="">--Selecione opcao--</option>
+                 <option value="celular">Celular</option>
+                 <option value="media-player">Media Player</option>
+
+                </select>
+
+				<label for="quantidade">Quantidade:</label>
+
+                <input type="number" id="quantidade" name="quantidade"
+                       min="1" max="100">
+
+				
+				<fieldset>
+					<legend>Condicao</legend>
+					<input type="radio" name="estado" value="novo" id="rdoNovo" checked>
+					<label for="rdoNovo">Novo</label><br>		
+					
+					<input type="radio" name="estado" value="usado" id="rdoUsado">
+					<label for="rdoUsado">Usado</label>
+				</fieldset>
+
+                <fieldset>
+                    <legend>Diferenciais:</legend>
+                
+                    <div>
+                      <input type="checkbox" id="fullhd" name="fullhd" checked>
+                      <label for="scales">Full-HD</label>
+                    </div>
+                
+                    <div>
+                      <input type="checkbox" id="5g" name="5g">
+                      <label for="horns">5G</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="dualchip" name="dualchip">
+                        <label for="horns">Dual-Chip</label>
+                      </div>
+                </fieldset>
+                
+				
+				<input type="submit" name="" id="btnCadastrarSalvar" value="Cadastrar">
+
+                <input type="limpar" name="" id="btnLimparResetar" value="Limpar">
+			</form>
+		</div>
+		<table>
+			<caption><h2>Itens Cadastratos</h2></caption>
+			<thead>
+				<tr>
+					<th>Modelo</th>
+					<th>Marca</th>
+					<th>Qtde.</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody id="tbodyResultados"></tbody>
+			<tfoot></tfoot>
+		</table>
+	</div>
+</body>
+</html>
